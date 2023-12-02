@@ -5,8 +5,11 @@ import './App.css';
 
 let url = `/api/todo`;
 
-const cloudEnv = import.meta.env.VITE_CLOUD_ENV;
-const backendEnv = import.meta.env.VITE_BACKEND_URI;
+// const cloudEnv = import.meta.env.VITE_CLOUD_ENV;
+// const backendEnv = import.meta.env.VITE_BACKEND_URI;
+// なぜか値がとれないので、一旦固定値を設定　←　ここを調査するのが重要かと
+const cloudEnv = 'production';
+const backendEnv = 'https://func-hide-first-swa-with-api-sbx.azurewebsites.net/';
 
 console.log(`CLOUD_ENV = ${cloudEnv}`)
 console.log(`BACKEND_URI = ${backendEnv}`)
