@@ -43,12 +43,13 @@ app.post('addOne', {
     if(body && body.title){
       todos[nextId++] = body.title;
 
-      const header = req.headers['x-ms-client-principal'];
-      const encoded = Buffer.from(header, 'base64');
-      const decoded = encoded.toString('ascii');
+      // const header = req.headers['x-ms-client-principal'];
+      // const encoded = Buffer.from(header, 'base64');
+      // const decoded = encoded.toString('ascii');
       // clientPrincipal: JSON.parse(decoded),
-      context.log(JOSN.parse(decoded));
-      console.log(todos);
+      // context.log(JOSN.parse(decoded));
+      context.log(request.headers);
+      // console.log(todos);
   
       return {
         jsonBody: body.title
