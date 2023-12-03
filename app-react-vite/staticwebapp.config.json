@@ -1,5 +1,22 @@
 {
     "platform": {
         "apiRuntime": "node:18"
-    }
+    },
+    "auth": {
+        "identityProviders": {
+          "azureActiveDirectory": {
+            "registration": {
+              "openIdIssuer": "https://login.microsoftonline.com/b2ce6f21-9c43-42be-ac4b-317fabeb1692/v2.0",
+              "clientIdSettingName": "AZURE_CLIENT_ID",
+              "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+            }
+          }
+        }
+      },
+      "routes": [
+        {
+          "route": "/*",
+          "allowedRoles": ["authenticated"]
+        }
+      ]
 }
