@@ -39,7 +39,8 @@ jobs:
           output_location: "dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env: 
-          VITE_BACKEND_URI: https://func-hide-first-swa-with-api-sbx.azurewebsites.net/
+          # VITE_BACKEND_URI: https://func-hide-first-swa-with-api-sbx.azurewebsites.net/
+          VITE_BACKEND_URI: ""
           VITE_CLOUD_ENV: production
   
   close_pull_request_job:
